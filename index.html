@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Comparison: BMW E60 M5 vs Mercedes E-Class S600</title>
+    <style>
+        /* Reset */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #eee;
+            background-color: #222;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #f1f1f1;
+        }
+
+        header h2 {
+            font-size: 1.5em;
+            color: #aaa;
+        }
+
+        /* Comparison section */
+        .car-comparison {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .car {
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 10px;
+            width: 45%;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .car img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .car h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #f1f1f1;
+        }
+
+        .car p {
+            text-align: left;
+            margin-top: 15px;
+            color: #ddd;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+
+        .car ul {
+            list-style-type: none;
+            text-align: left;
+            margin-top: 10px;
+            padding: 0;
+            display: none;
+        }
+
+        .car ul li {
+            margin-bottom: 8px;
+            font-size: 1em;
+            color: #bbb;
+        }
+
+        .highlights {
+            margin-top: 15px;
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        /* Article section styling */
+        .article {
+            margin-top: 30px;
+            padding: 15px;
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .article h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #f1f1f1;
+        }
+
+        .article p {
+            margin-top: 10px;
+            font-size: 1em;
+            line-height: 1.5;
+            color: #ddd;
+        }
+
+        /* Table styling */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #444;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .comparison-table td {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        .comparison-note {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #f1f1f1;
+            text-align: center;
+        }
+
+        /* Styling for the toggle effect */
+        .car img:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Comparison</h1>
+        <h2>BMW E60 M5 2008 vs Mercedes E-Class S600 2008</h2>
+    </header>
+    <main>
+        <section class="car-comparison">
+            <!-- BMW -->
+            <div class="car" onclick="toggleInfo(this)">
+                <h3>BMW E60 M5 (2008)</h3>
+                <img src="images/bmw-m5.jpg" alt="BMW E60 M5 2008">
+                <ul>
+                    <li><strong>Engine:</strong> 5.0L V10</li>
+                    <li><strong>Horsepower:</strong> 507 HP</li>
+                    <li><strong>Top Speed:</strong> 250 km/h (limited)</li>
+                    <li><strong>Acceleration:</strong> 0-100 km/h in 4.7s</li>
+                    <li><strong>Transmission:</strong> 7-speed SMG</li>
+                </ul>
+                <div class="highlights">
+                    <h4>Highlights:</h4>
+                    <p>The BMW E60 M5 broke the record for the most powerful naturally aspirated V10 engine in a sedan. Renowned for its handling and performance on tracks, it also featured an advanced SMG gearbox for its time.</p>
+                </div>
+            </div>
+
+            <!-- Mercedes -->
+            <div class="car" onclick="toggleInfo(this)">
+                <h3>Mercedes E-Class S600 (2008)</h3>
+                <img src="images/mercedes-eclass.jpg" alt="Mercedes E-Class S600 2008">
+                <ul>
+                    <li><strong>Engine:</strong> 5.5L V12</li>
+                    <li><strong>Horsepower:</strong> 510 HP</li>
+                    <li><strong>Top Speed:</strong> 250 km/h (limited)</li>
+                    <li><strong>Acceleration:</strong> 0-100 km/h in 4.6s</li>
+                    <li><strong>Transmission:</strong> 7-speed automatic</li>
+                </ul>
+                <div class="highlights">
+                    <h4>Highlights:</h4>
+                    <p>The Mercedes S600 was celebrated for its luxurious ride and unmatched interior quality. It offered a class-leading V12 engine and top-tier technology, redefining comfort and performance in luxury sedans.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Section -->
+        <section class="article">
+            <h2>BMW vs Mercedes-Benz: A Rivalry of Luxury and Performance</h2>
+            <p>BMW and Mercedes-Benz are among the most competitive luxury automotive brands in the world. Their rivalry is not just about sales but also about innovation and offering cutting-edge designs that captivate consumers.</p>
+            <p><strong>BMW:</strong> Known for its slogan "The Ultimate Driving Machine," BMW focuses on delivering a sporty experience with high-performance engines and dynamic handling.</p>
+            <p><strong>Mercedes-Benz:</strong> Renowned for its luxurious offerings, technological innovations, and comfort, with a long-standing legacy of satisfying the most demanding customers.</p>
+            <p>In 2008, this rivalry reached a peak with the release of two exceptional models: the BMW E60 M5 and the Mercedes-Benz E-Class S600. These models represent the distinct philosophies of each brand and deliver extraordinary driving experiences.</p>
+
+            <!-- Comparison Table -->
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>BMW E60 M5</th>
+                        <th>Mercedes E-Class S600</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Engine</td>
+                        <td>5.0L V10</td>
+                        <td>5.5L V12</td>
+                    </tr>
+                    <tr>
+                        <td>Horsepower</td>
+                        <td>507 HP</td>
+                        <td>510 HP</td>
+                    </tr>
+                    <tr>
+                        <td>Top Speed</td>
+                        <td>250 km/h (limited)</td>
+                        <td>250 km/h (limited)</td>
+                    </tr>
+                    <tr>
+                        <td>Acceleration (0-100 km/h)</td>
+                        <td>4.7 seconds</td>
+                        <td>4.6 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>Transmission</td>
+                        <td>7-speed SMG</td>
+                        <td>7-speed automatic</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="comparison-note">Which is Better? The BMW E60 M5 is ideal for driving enthusiasts seeking a thrilling and performance-oriented experience. The Mercedes-Benz S600 offers a luxurious option that combines power and comfort, making it perfect for drivers who prioritize refinement and smoothness.</p>
+            <p>Ultimately, the choice between these two models depends on the buyer's preferences. BMW focuses on excitement and driving pleasure, while Mercedes-Benz delivers a more luxurious and tranquil experience.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 by عبد الله محمد أحمد. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle information visibility
+        function toggleInfo(carElement) {
+            const info = carElement.querySelector('ul');
+            info.style.display = info.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
